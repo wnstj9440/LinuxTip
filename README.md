@@ -8,6 +8,20 @@
 	2. sudo npm install -g n		: n 모듈 설치
 	3. sudo n stable					: n 모듈 이용하여 Node.js 설치
 
+
+* vim vundle 설치
+	1. git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+	2. vimrc 첫 부분에 아래 내용 추가
+<pre><code>set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+
+call vundle#begin()
+	Plugin 'VundleVim/Vundle.vim'
+call vundle#end()
+</code></pre>
+
 * vim 마크다운 liveview 플러그인 설치
 	1. git clone git://github.com/shime/vim-livedown.git ~/.vim/bundle/vim-livedown 
 	2. vimrc 파일에 __Plugin 'shime/vim-livedown'__ 추가
@@ -17,3 +31,4 @@
 		* :LivedownPreview  	-> Preview start
 		* :LivedownKill		-> Preview end
 		* :LivedownToggle		-> Preview toggle
+
