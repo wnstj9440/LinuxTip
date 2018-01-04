@@ -6,12 +6,28 @@
 </pre>
 <hr/>
 
+* Advanced-cp, mv (복사, 이동 중 Progress bar 표시) -> root user에서 설치
+	1. wget https://www.dropbox.com/s/o9rs7o0l0569iv3/coreutils-8.4-receipt.tar.gz?dl=0
+	2. mv -v coreutils-8.4-receipt.tar.gz?dl=0 coreutils-8.4-receipt.tar.gz
+	3. tar -zxvf coreutils-8.4-receipt.tar.gz 
+	4. tar -zxvf coreutils-8.4.tar.gz
+	5. cp -v coreutils-8.4.patch coreutils-8.4/
+	6. cd coreutils-8.4/
+	7. patch -p1 -i coreutils-8.4.patch
+	8. ./configure 
+	9. make
+	10. cp src/cp /usr/local/bin/cp; cp src/mv /usr/local/bin/mv   (cp와 mv경로는 which 명령을 통해 확인)
+<hr/>
+
+
+```
+```
+
 * Node.js Upgrade
 	1. sudo npm cache clean -f		: 캐시 강제 삭제
 	2. sudo npm install -g n		: n 모듈 설치
 	3. sudo n stable					: n 모듈 이용하여 Node.js 설치
 <hr/>
-
 
 * vim vundle 설치
 	1. git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
